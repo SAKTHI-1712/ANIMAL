@@ -1,11 +1,10 @@
 package com.cslc.MainPackage;
-
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.*;
-
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-
 public class Controller extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -14,11 +13,8 @@ public class Controller extends HttpServlet {
         String pwd = request.getParameter("userPassword");
 
         try (Connection conn = Connect.getConnection()) {
-            if (conn == null) {
-                response.getWriter().println("❌ Error: Database connection is null. Check Connect.java config.");
-                return;
-            }
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM user_credentials WHERE user_name=? AND user_password=?");
+            
+            PreparedStatement ps = conn.prepareStatement("SELECT user_name, user_password FROM user_credentials WHERE user_name=? AND user_password=?");
             ps.setString(1, uname);
             ps.setString(2, pwd);
 
