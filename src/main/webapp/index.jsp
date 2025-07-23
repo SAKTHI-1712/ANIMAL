@@ -6,7 +6,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?nature,pastel') no-repeat center center fixed;
+            background: url('https://png.pngtree.com/thumb_back/fh260/background/20250605/pngtree-cute-cartoon-house-with-pink-roof-in-a-sunny-landscape-illustration-image_17290076.jpg') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100vh;

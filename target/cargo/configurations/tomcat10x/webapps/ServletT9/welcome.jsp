@@ -6,42 +6,86 @@
   <title>Welcome - Animal A-Z Viewer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e3f2fd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #fceef3, #e0f7fa);
       text-align: center;
       padding: 20px;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
     h1, h2 {
-      color: #0d47a1;
+      color: #6a5acd;
+      margin-bottom: 10px;
     }
+
     .animal-container {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      padding: 20px;
       margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
     }
+
     .animal-image {
       width: 250px;
       height: 250px;
       object-fit: cover;
-      border: 2px solid #0d47a1;
-      border-radius: 12px;
+      border: 3px solid #ba68c8;
+      border-radius: 15px;
       margin-top: 20px;
+      box-shadow: 4px 4px 10px rgba(186, 104, 200, 0.2);
+      transition: transform 0.3s ease;
     }
+
+    .animal-image:hover {
+      transform: scale(1.05);
+    }
+
     #animalList button {
-      margin: 4px;
-      padding: 8px 16px;
+      margin: 6px;
+      padding: 10px 18px;
       font-size: 16px;
       cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffdce0;
+      color: #4a4a4a;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px #fff;
+      transition: background-color 0.3s ease, transform 0.2s;
     }
+
+    #animalList button:hover {
+      background-color: #ffc1cc;
+      transform: translateY(-2px);
+    }
+
     .logout-btn {
       position: absolute;
       top: 15px;
       right: 15px;
-      background-color: #ef5350;
+      background-color: #f48fb1;
       color: white;
-      padding: 6px 14px;
+      padding: 8px 16px;
       border: none;
-      border-radius: 6px;
+      border-radius: 10px;
       font-size: 14px;
       cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logout-btn:hover {
+      background-color: #ec407a;
+    }
+
+    p {
+      color: #4e4e4e;
+      font-size: 18px;
     }
   </style>
 </head>
